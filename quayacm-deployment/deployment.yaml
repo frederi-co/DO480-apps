@@ -18,6 +18,8 @@ spec:
         app: budget-app
         name: budget-app
     spec:
+      imagePullSecrets:
+        - name: finance-dev-deployer-pull-secret
       containers:
       - image: central-quay-registry.apps.ocp4.example.com/finance/budget-app-dev:1
         name: budget-app
